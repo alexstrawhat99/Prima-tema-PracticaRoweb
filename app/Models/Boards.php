@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Models;
+
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+use Illuminate\Notifications\Notifiable;
+
+class Boards
+{
+    use HasFactory, Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'user',
+        'member',
+        'action'
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+
+    ];
+
+
+    public static function create(array $array)
+    {
+    }
+}
